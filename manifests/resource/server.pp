@@ -28,6 +28,7 @@
 #   [*proxy_send_timeout*]         - Override the default proxy send timeout value of 90 seconds
 #   [*proxy_redirect*]             - Override the default proxy_redirect value of off.
 #   [*proxy_buffering*]            - If defined, sets the proxy_buffering to the passed value.
+#   [*proxy_request_buffering*]    - If defined, sets the proxy_request_buffering to the passed value.
 #   [*resolver*]                   - Array: Configures name servers used to resolve names of upstream servers into addresses.
 #   [*fastcgi*]                    - location of fastcgi (host:port)
 #   [*fastcgi_param*]              - Set additional custom fastcgi_params
@@ -199,6 +200,7 @@ define nginx::resource::server (
   Optional[String] $proxy_http_version                                           = undef,
   Optional[String] $proxy_set_body                                               = undef,
   Optional[String] $proxy_buffering                                              = undef,
+  Optional[String] $proxy_request_buffering                                      = undef,
   Array $resolver                                                                = [],
   Optional[String] $fastcgi                                                      = undef,
   Optional[String] $fastcgi_index                                                = undef,

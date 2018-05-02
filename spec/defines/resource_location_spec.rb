@@ -888,6 +888,12 @@ describe 'nginx::resource::location' do
               attr: 'proxy_buffering',
               value: 'on',
               match: %r{\s+proxy_buffering\s+on;}
+            },
+            {
+              title: 'should set proxy_request_buffering',
+              attr: 'proxy_request_buffering',
+              value: 'on',
+              match: %r{\s+proxy_request_buffering\s+on;}
             }
           ].each do |param|
             context "when #{param[:attr]} is #{param[:value]}" do
